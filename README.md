@@ -6,18 +6,16 @@
 <p>
   <span> Мой учебный проект по C# </span> <br>
   <a href=https://ulearn.me/course/basicprogramming2> Ссылка на курс </a>
+  <a href=https://docs.google.com/document/d/1xwi24RI5ivQ3CazJDDVRSZXw2td0UFKgcb_n0XRHWWY/edit?usp=sharing> Описание игры </a>
 </p>
 
 <h2>#TODO</h2>
-<h4>Неделя 2:</h4>
+<h4>Неделя 3:</h4>
 <ul>
   <li> 
-    Спроектировать основные сущности в модели
+    <strike>Первый пулл проекта</strike>
   </li>
   <li>
-    Заложить основы их взаимодействия.
-  </li>
-  <li>
-    В winForms выводить начальное поле 3х3 карты. Возможно, (визуально) сделать возможность хода.
+    <strike>Допроектировать классы</strike>
   </li>
 </ul>
