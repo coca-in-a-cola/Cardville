@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iIHwOgqxGIrHBfqB6KzHvNz/GiWKghwUsc78z9YhiPgXzRdy+QKfBpu0BNFl1hD2Sv/MKZPVMxPh5JNkz+bkIw==",
+  "dgSpecHash": "/XEzMBcYJML4zL4CTm4UjUxGMKjbHs+5i6scaJF1Zd1VbZzifO8ls2e2QbJGjsCsM9wyxqoL+ZHFcGUzlrsGdQ==",
   "success": true,
-  "projectFilePath": "C:\\C# Game project\\Cardville Dungeon\\TestProject\\TestProject.csproj",
+  "projectFilePath": "C:\\Users\\Me\\source\\repos\\coca-in-a-cola\\Cardville\\TestProject\\TestProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Me\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
     "C:\\Users\\Me\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",

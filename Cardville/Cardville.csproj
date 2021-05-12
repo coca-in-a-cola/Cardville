@@ -34,9 +34,6 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Drawing.Common, Version=4.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Drawing.Common.5.0.2\lib\net461\System.Drawing.Common.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,12 +44,14 @@
   <ItemGroup>
     <Compile Include="Cards\Card.cs" />
     <Compile Include="Cards\CardTemplate.cs" />
+    <Compile Include="Dungeon\CardMap.cs" />
+    <Compile Include="Dungeon\Level.cs" />
     <Compile Include="Effects\Effect.cs" />
+    <Compile Include="Entity.cs" />
     <Compile Include="IEffect.cs" />
-    <Compile Include="ICard.cs" />
+    <Compile Include="IInteractive.cs" />
     <Compile Include="ICardGeneratorData.cs" />
     <Compile Include="ICardImage.cs" />
-    <Compile Include="Interface1.cs" />
     <Compile Include="Player\Inventory.cs" />
     <Compile Include="Cards\Item.cs" />
     <Compile Include="Player\Personality.cs" />
@@ -60,9 +59,6 @@
     <Compile Include="Player\PresonalityEnums.cs" />
     <Compile Include="Rarity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

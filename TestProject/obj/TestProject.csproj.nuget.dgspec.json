@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\C# Game project\\Cardville Dungeon\\TestProject\\TestProject.csproj": {}
+    "C:\\Users\\Me\\source\\repos\\coca-in-a-cola\\Cardville\\TestProject\\TestProject.csproj": {}
   },
   "projects": {
-    "C:\\C# Game project\\Cardville Dungeon\\TestProject\\TestProject.csproj": {
+    "C:\\Users\\Me\\source\\repos\\coca-in-a-cola\\Cardville\\TestProject\\TestProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\C# Game project\\Cardville Dungeon\\TestProject\\TestProject.csproj",
+        "projectUniqueName": "C:\\Users\\Me\\source\\repos\\coca-in-a-cola\\Cardville\\TestProject\\TestProject.csproj",
         "projectName": "TestProject",
-        "projectPath": "C:\\C# Game project\\Cardville Dungeon\\TestProject\\TestProject.csproj",
+        "projectPath": "C:\\Users\\Me\\source\\repos\\coca-in-a-cola\\Cardville\\TestProject\\TestProject.csproj",
         "packagesPath": "C:\\Users\\Me\\.nuget\\packages\\",
-        "outputPath": "C:\\C# Game project\\Cardville Dungeon\\TestProject\\obj\\",
+        "outputPath": "C:\\Users\\Me\\source\\repos\\coca-in-a-cola\\Cardville\\TestProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Me\\AppData\\Roaming\\NuGet\\NuGet.Config",

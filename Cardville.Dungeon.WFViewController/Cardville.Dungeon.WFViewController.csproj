@@ -78,10 +78,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Cardville.Dungeon\Cardville.Dungeon.csproj">
-      <Project>{6791896e-3466-4451-8d70-30d437ce48d8}</Project>
-      <Name>Cardville.Dungeon</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Cardville\Cardville.csproj">
       <Project>{3dda69b0-189d-433a-8472-bbcf776aa6bc}</Project>
       <Name>Cardville</Name>

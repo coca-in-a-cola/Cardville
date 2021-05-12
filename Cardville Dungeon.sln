@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProject", "TestProject\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cardville", "Cardville\Cardville.csproj", "{3DDA69B0-189D-433A-8472-BBCF776AA6BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cardville.Dungeon", "Cardville.Dungeon\Cardville.Dungeon.csproj", "{6791896E-3466-4451-8D70-30D437CE48D8}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cardville.Dungeon.WFViewController", "Cardville.Dungeon.WFViewController\Cardville.Dungeon.WFViewController.csproj", "{F6CC5C6F-52A1-4FF4-88C4-84628C86FEF6}"
 EndProject
 Global
@@ -25,10 +23,6 @@ Global
 		{3DDA69B0-189D-433A-8472-BBCF776AA6BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DDA69B0-189D-433A-8472-BBCF776AA6BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DDA69B0-189D-433A-8472-BBCF776AA6BC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6791896E-3466-4451-8D70-30D437CE48D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6791896E-3466-4451-8D70-30D437CE48D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6791896E-3466-4451-8D70-30D437CE48D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6791896E-3466-4451-8D70-30D437CE48D8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F6CC5C6F-52A1-4FF4-88C4-84628C86FEF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F6CC5C6F-52A1-4FF4-88C4-84628C86FEF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6CC5C6F-52A1-4FF4-88C4-84628C86FEF6}.Release|Any CPU.ActiveCfg = Release|Any CPU

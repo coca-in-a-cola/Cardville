@@ -8,11 +8,20 @@ namespace Cardville.Cards
 {
     public class Item : Card
     {
-        public new Effect<Item> ActiveEffects;
         public int Price { get; private set; }
-        public Item(CardTemplate template) : base(template)
+        public Item(CardTemplate template, int level) : base(template, level)
         {
 
+        }
+
+        public override bool CanInteractWith(IInteractive another)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void InteractWith(IInteractive another)
+        {
+            throw new NotImplementedException();
         }
     }
 }

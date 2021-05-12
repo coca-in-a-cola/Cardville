@@ -10,6 +10,6 @@ namespace Cardville.Dungeon.WFViewController
 {
     class CardPainter
     {
-        private readonly Card CardData;
+
     }
 }

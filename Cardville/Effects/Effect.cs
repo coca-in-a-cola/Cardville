@@ -3,16 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Cardville.Cards;
+using System.Linq.Expressions;
 
 namespace Cardville.Effects
 {
-    class Effect : IEffect
+    public class Effect
     {
-        public ICard Target { get => throw new NotImplementedException();}
-        public bool AppliesTo(ICard target)
+        public readonly Expression<Action<Card>> Formula;
+        private Action<Card> action;
+
+        public delegate void EffectEventHandler(object sender, EventArgs e);
+        public event EffectEventHandler OnApply;
+
+        public Effect(Expression<Action<Card>> formula)
         {
-            throw new NotImplementedException();
+            action = formula.Compile();
         }
-        public void Apply()
+
+        public void Apply(Card to)
+        {
+            lock (to)
+            {
+                action(to);
+            }
+
+            OnApply?.Invoke(this, new EventArgs());
+        }
     }
 }

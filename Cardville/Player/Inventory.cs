@@ -9,6 +9,6 @@ namespace Cardville.Player
     class Inventory
     {
         public int MaxSize { get; private set; }
-        private List<ICard> items;
+        private List<IInteractive> items;
     }
 }

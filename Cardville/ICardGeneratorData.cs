@@ -8,7 +8,7 @@ namespace Cardville
 {
     public interface ICardGeneratorData
     {
-        RaritySystem RaritySystem { get; };
+        RaritySystem RaritySystem { get; }
         int SpawnerLevel {get;set;}
     }
 }

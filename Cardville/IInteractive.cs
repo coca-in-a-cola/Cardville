@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Cardville
 {
-    interface IEffectStack
+    public interface IInteractive
     {
-        public 
+        bool CanInteractWith(IInteractive another);
+        void InteractWith(IInteractive another);
     }
 }

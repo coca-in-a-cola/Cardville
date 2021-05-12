@@ -8,9 +8,7 @@ namespace Cardville
 {
     public interface IEffect
     {
-        bool AppliesTo(ICard Target);
-        ICard Target { get; set; }
-        Action Apply { get; set; }
-        Action Remove { get; set; }
+        bool AppliesTo(IInteractive Target);
+        IInteractive Target { get; set; }
     }
 }

@@ -13,15 +13,15 @@ namespace Cardville.Dungeon
         public Size Size 
         {
             get
-                => new Size(cardField.GetLength(0), cardField.GetLength(1));
+                => new Size(gameField.GetLength(0), gameField.GetLength(1));
         }
 
-        private readonly ICard[,] cardField;
+        private readonly IInteractive[,] gameField;
 
-        public ICard this[int indexX, int indexY]
+        public IInteractive this[int indexX, int indexY]
         {
             get
-                => cardField[indexX, indexY];
+                => gameField[indexX, indexY];
         }
     }
 }
