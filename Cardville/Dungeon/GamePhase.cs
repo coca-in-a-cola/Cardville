@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Cardville
+namespace Cardville.Dungeon
 {
-    public interface IEffect
+    public enum GamePhase
     {
-        bool AppliesTo(IInteractive Target);
-        IInteractive Target { get; set; }
+        Prophase,
+        Phase,
+        Postphase,
     }
 }

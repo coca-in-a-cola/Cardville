@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Cardville.Engine;
 
 namespace Cardville.Cards
 {
-    public class Item : Card
+    public abstract class Item : Card
     {
-        public int Price { get; private set; }
+        public int Price { get; protected set; }
         public Item(CardTemplate template, int level) : base(template, level)
         {
 

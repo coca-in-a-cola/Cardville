@@ -4,15 +4,16 @@ using Cardville.Cards;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Cardville.Engine;
+
 
 namespace Cardville.Player
 {
-    class Player : Entity
+    class Player : EffectableEntity
     {
         public readonly Inventory Inventory;
         public int RunAway { get; private set; } 
         public Personality personality { get; }
-        public List<IEffect> Effects;
 
         public override bool CanInteractWith(IInteractive another)
         {
@@ -20,6 +21,11 @@ namespace Cardville.Player
         }
 
         public override void InteractWith(IInteractive another)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void RestoreOriginalValues()
         {
             throw new NotImplementedException();
         }

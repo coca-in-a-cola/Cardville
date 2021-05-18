@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cardville.Dungeon
 {
-    public class Level
+    class OnModelUpdate
     {
-        public CardMap Map { get; }
-        public int Days { get; private set; }
     }
 }

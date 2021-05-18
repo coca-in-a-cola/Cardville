@@ -10,25 +10,26 @@ namespace Cardville.Effects
 {
     public class Effect
     {
-        public readonly Expression<Action<Card>> Formula;
-        private Action<Card> action;
+        public readonly List<Change> Changes;
 
-        public delegate void EffectEventHandler(object sender, EventArgs e);
-        public event EffectEventHandler OnApply;
-
-        public Effect(Expression<Action<Card>> formula)
+        public Effect (params Change [] changes)
         {
-            action = formula.Compile();
+            Changes = changes.ToList();
         }
 
-        public void Apply(Card to)
+        public override int GetHashCode()
         {
-            lock (to)
+            var result = 0x1337;
+            foreach (var c in Changes)
             {
-                action(to);
+                unchecked
+                {
+                    result *= 0x420;
+                    result += c.GetHashCode();
+                }
             }
 
-            OnApply?.Invoke(this, new EventArgs());
+            return unchecked(result);
         }
     }
 }

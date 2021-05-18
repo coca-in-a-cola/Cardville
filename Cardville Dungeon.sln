@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cardville", "Cardville\Card
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cardville.Dungeon.WFViewController", "Cardville.Dungeon.WFViewController\Cardville.Dungeon.WFViewController.csproj", "{F6CC5C6F-52A1-4FF4-88C4-84628C86FEF6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cardvile.CreatorMode", "Cardvile.CreatorMode\Cardvile.CreatorMode.csproj", "{55D8F84A-07B5-415C-A2C5-FA74521EDF90}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F6CC5C6F-52A1-4FF4-88C4-84628C86FEF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6CC5C6F-52A1-4FF4-88C4-84628C86FEF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6CC5C6F-52A1-4FF4-88C4-84628C86FEF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55D8F84A-07B5-415C-A2C5-FA74521EDF90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55D8F84A-07B5-415C-A2C5-FA74521EDF90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55D8F84A-07B5-415C-A2C5-FA74521EDF90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55D8F84A-07B5-415C-A2C5-FA74521EDF90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

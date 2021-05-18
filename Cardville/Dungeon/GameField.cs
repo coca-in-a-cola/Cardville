@@ -5,16 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using Cardville;
+using Cardville.Engine;
 
 namespace Cardville.Dungeon
 {
-    public class CardMap
+    public class GameField
     {
-        public Size Size 
-        {
-            get
-                => new Size(gameField.GetLength(0), gameField.GetLength(1));
-        }
+        public int Width { get; private set; }
+        public int Height { get; private set; }
 
         private readonly IInteractive[,] gameField;
 
@@ -22,6 +20,11 @@ namespace Cardville.Dungeon
         {
             get
                 => gameField[indexX, indexY];
+        }
+
+        public void Update()
+        {
+            throw new NotImplementedException();
         }
     }
 }
