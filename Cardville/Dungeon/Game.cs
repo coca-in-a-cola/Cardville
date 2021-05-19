@@ -12,6 +12,11 @@ namespace Cardville.Dungeon
         public GameField Map { get; }
         public int Days { get; private set; }
         public GamePhase Phase { get; private set; }
-        public TRPsystem TRP { get; private set; }
+        public Core.Environment Constants { get; private set; }
+
+        public Game()
+        {
+            Map = new GameField(3, 3);
+        }
     }
 }

@@ -15,6 +15,9 @@ namespace Cardville.Dungeon.WFViewController
         public GameLevelForm()
         {
             InitializeComponent();
+            Game game = new Game();
+            DungeonPainter dungeonPainter = new DungeonPainter(game, this);
+            this.Controls.Add(dungeonPainter.GetControl());
         }
     }
 }
