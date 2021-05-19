@@ -6,3 +6,9 @@ C:\C# Game project\Cardville Dungeon\Cardville\obj\Debug\Cardville.csproj.CoreCo
 C:\C# Game project\Cardville Dungeon\Cardville\obj\Debug\Cardville.csproj.CopyComplete
 C:\C# Game project\Cardville Dungeon\Cardville\obj\Debug\Cardville.dll
 C:\C# Game project\Cardville Dungeon\Cardville\obj\Debug\Cardville.pdb
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardville\obj\Debug\Cardville.csprojAssemblyReference.cache
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardville\obj\Debug\Cardville.csproj.CoreCompileInputs.cache
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardville\obj\Debug\Cardville.dll
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardville\obj\Debug\Cardville.pdb
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardville\bin\Debug\Cardville.dll
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardville\bin\Debug\Cardville.pdb

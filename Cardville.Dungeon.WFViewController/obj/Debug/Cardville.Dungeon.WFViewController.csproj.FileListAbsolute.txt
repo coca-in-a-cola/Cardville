@@ -1,0 +1,12 @@
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardville.Dungeon.WFViewController\obj\Debug\Cardville.Dungeon.WFViewController.csprojAssemblyReference.cache
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardville.Dungeon.WFViewController\obj\Debug\Cardville.Dungeon.WFViewController.Properties.Resources.resources
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardville.Dungeon.WFViewController\obj\Debug\Cardville.Dungeon.WFViewController.csproj.GenerateResource.cache
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardville.Dungeon.WFViewController\obj\Debug\Cardville.Dungeon.WFViewController.csproj.CoreCompileInputs.cache
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardville.Dungeon.WFViewController\bin\Debug\Cardville.Dungeon.WFViewController.exe.config
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardville.Dungeon.WFViewController\bin\Debug\Cardville.Dungeon.WFViewController.exe
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardville.Dungeon.WFViewController\bin\Debug\Cardville.Dungeon.WFViewController.pdb
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardville.Dungeon.WFViewController\bin\Debug\Cardville.dll
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardville.Dungeon.WFViewController\bin\Debug\Cardville.pdb
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardville.Dungeon.WFViewController\obj\Debug\Cardville.Dungeon.WFViewController.csproj.CopyComplete
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardville.Dungeon.WFViewController\obj\Debug\Cardville.Dungeon.WFViewController.exe
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardville.Dungeon.WFViewController\obj\Debug\Cardville.Dungeon.WFViewController.pdb

@@ -5,11 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Cardville.Engine;
 
-namespace Cardville.Player
+namespace Cardville.Dungeon.WFViewController
 {
-    class Inventory
+    public interface IHasIInteractive
     {
-        public int MaxSize { get; private set; }
-        private List<IInteractive> items;
+        IInteractive GetIInteractive();
     }
 }

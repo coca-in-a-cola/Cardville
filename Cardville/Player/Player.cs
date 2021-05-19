@@ -25,11 +25,6 @@ namespace Cardville.Player
             throw new NotImplementedException();
         }
 
-        protected override void RestoreOriginalValues()
-        {
-            throw new NotImplementedException();
-        }
-
         public Player (string name) : base(name, 1)
         {
 
