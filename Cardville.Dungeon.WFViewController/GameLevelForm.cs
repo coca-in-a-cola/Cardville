@@ -15,9 +15,17 @@ namespace Cardville.Dungeon.WFViewController
         public GameLevelForm()
         {
             InitializeComponent();
-            Game game = new Game();
-            DungeonPainter dungeonPainter = new DungeonPainter(game, this);
+            Game game = new Game("Hellou Man");
+            this.WindowState = FormWindowState.Maximized;
+
+            DungeonPainter dungeonPainter = new DungeonPainter(game);
+            dungeonPainter.GetControl().Size = new Size(1920, 1080);
             this.Controls.Add(dungeonPainter.GetControl());
+
+            InventoryPainter inventoryPainter = new InventoryPainter(game.Player.Inventory, 3);
+            inventoryPainter.GetControl().Size = new Size(1920, 1080);
+            inventoryPainter.GetControl().Location = new Point(960, 0);
+            this.Controls.Add(inventoryPainter.GetControl());
         }
     }
 }

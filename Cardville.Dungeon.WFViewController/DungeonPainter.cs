@@ -5,47 +5,67 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
+using Cardville.Player;
+using Cardville.Cards;
 
 namespace Cardville.Dungeon.WFViewController
 {
-    public class DungeonPainter : IHasControl
+    public class DungeonPainter : IPainter
     {
         public readonly Game Game;
-        public readonly GameLevelForm Form;
 
-        public readonly List<IneractiveControl> IneractiveControls
-            = new List<IneractiveControl>();
+        public readonly List<GameObjectPainter> CanvasItems
+            = new List<GameObjectPainter>();
+
+        public Color SelectedColor = Color.LightGreen;
+        public Color SelectableColor = Color.LightCyan;
+        public Color NormalColor = Color.FromArgb(250, 204, 152);
 
         public Point Offset { get; set; }
-        public Point GridSize { get; set; }
-        public Point GridMargin { get; set; }
+        public Point Margin { get; set; }
 
         private Control control = new Control();
 
-        public DungeonPainter(Game game, GameLevelForm form)
+        public DungeonPainter(Game game)
         {
             Game = game;
-            Form = form;
-
-            var vw = Form.Width / Game.Map.Width;
-            var vh = Form.Height / Game.Map.Height;
-
-            Offset = new Point(0, 0);
-            GridSize = new Point(vw - vw / 10, vh - vh / 10);
-            GridMargin = new Point(vw / 10, vh / 10);
-
+            Offset = new Point(20, 20);
+            Margin = new Point(10, 10);
             Refresh();
+            Game.Map.OnUpdate += () => Refresh();
+            game.OnSelect += () => HighlightForSelected();
+            game.OnUnselect += () => Unselect();
+        }
+
+        public void HighlightForSelected()
+        {
+            foreach (var e in CanvasItems)
+            {
+                if (Game.Selected == e)
+                    e.GetControl().BackColor = SelectedColor;
+                else if (Game.Map.CanInteractInField(Game.Selected, e.GetIInteractive()))
+                    e.GetControl().BackColor = SelectableColor;
+            }
+        }
+
+        public void Unselect()
+        {
+            foreach (var e in CanvasItems)
+            {
+                e.GetControl().BackColor = NormalColor;
+            }
         }
 
         private void RebuildInteractiveControls()
         {
-            IneractiveControls.Clear();
+            CanvasItems.Clear();
 
             for (int xIndex = 0; xIndex < Game.Map.Width; ++xIndex)
             {
                 for (int yIndex = 0; yIndex < Game.Map.Height; ++yIndex)
                 {
-                    IneractiveControls.Add(new IneractiveControl(Game.Map[xIndex, yIndex]));
+                    var gameObject = Game.Map[xIndex, yIndex];
+                    CanvasItems.Add(PainterSelector.GetPainter(gameObject));
                 }
             }
         }
@@ -53,21 +73,29 @@ namespace Cardville.Dungeon.WFViewController
         private void ConstructControl()
         {
             var drawLocation = Offset;
-            for (int cotrolIndex = 0; cotrolIndex < IneractiveControls.Count; ++cotrolIndex)
+            for (int yIndex = 0; yIndex < Game.Map.Height; ++yIndex)
             {
-                var interactiveControl = IneractiveControls[cotrolIndex];
-                interactiveControl.GetControl().Location = drawLocation;
-                control.Controls.Add(interactiveControl.GetControl());
-
-                //Make Rows
-                if (cotrolIndex % Game.Map.Width == 0 && cotrolIndex != 0)
+                var maxItemHeight = 0;
+                for (int xIndex = 0; xIndex < Game.Map.Width; ++xIndex)
                 {
-                    drawLocation.Y += GridSize.Y + GridMargin.Y;
-                    drawLocation.X = 0;
+                    var index = xIndex + yIndex * Game.Map.Width;
+                    var control = CanvasItems[index].GetControl();
+                    control.Location = drawLocation;
+
+                    control.Click += (sender, args)
+                        => Game.Select(CanvasItems[index].GetIInteractive());
+
+                    this.control.Controls.Add(control);
+
+                    drawLocation.X += control.Width;
+                    drawLocation.X += Margin.X;
+
+                    maxItemHeight = Math.Max(maxItemHeight, control.Height);
                 }
 
-                else
-                    drawLocation.X += GridSize.X + GridMargin.X;
+                drawLocation.Y += maxItemHeight;
+                drawLocation.Y += Margin.Y;
+                drawLocation.X = Offset.X;
             }
         }
 

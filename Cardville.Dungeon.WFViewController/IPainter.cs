@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Cardville.Dungeon.WFViewController
 {
-    public interface IHasControl
+    public interface IPainter
     {
         Control GetControl();
     }
