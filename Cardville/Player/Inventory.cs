@@ -5,12 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using Cardville.Engine;
 using Cardville.Cards;
+using Cardville.Dungeon;
 
 namespace Cardville.Player
 {
     public class Inventory
     {
         private PlayerObject player;
+        private Spawner spawner;
+
         public int MaxSize { get; private set; }
         public int Size { get => items.Count; }
 
@@ -20,11 +23,25 @@ namespace Cardville.Player
         private int wornCount;
         private readonly List<bool> worn;
 
+        private readonly Queue<Item> tempq;
+
         public Inventory (PlayerObject player)
         {
             this.player = player;
             items = new List<Item>();
             worn = new List<bool>();
+
+            tempq = new Queue<Item>();
+
+            spawner = new Spawner(player.Game);
+            
+            for (int i = 0; i < 2; ++i)
+            {
+                var startLoot = (Equipment)spawner.GetRandomObjectOfType(GameObjectType.Equipment);
+                AddItem(startLoot);
+                Wear(startLoot);
+            }
+
             OnUpdate?.Invoke();
         }
 
@@ -32,13 +49,24 @@ namespace Cardville.Player
         {
             items.Add(item);
             worn.Add(false);
+            tempq.Enqueue(item);
             OnUpdate?.Invoke();
+        }
+
+        public void RemoveLast()
+        {
+            var last = tempq.Dequeue();
+            RemoveItem(last);
         }
 
         public void RemoveItem(Item item)
         {
             Unwear(item);
-            items.Remove(item);
+
+            var index = items.IndexOf(item);
+            items.RemoveAt(index);
+            worn.RemoveAt(index);
+
             OnUpdate?.Invoke();
         }
 

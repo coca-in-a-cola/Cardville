@@ -49,5 +49,11 @@ namespace Cardville.Dungeon.WFViewController
             label.BackColor = Color.Transparent;
             return label;
         }
+
+        public static string GetText(Rarity rarity)
+            => rarityNames[rarity];
+
+        public static Color GetColor(Rarity rarity)
+            => rarityColors[rarity];
     }
 }

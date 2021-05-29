@@ -29,13 +29,39 @@ namespace Cardville.Dungeon.WFViewController
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.dungeonPanel = new MetroFramework.Controls.MetroPanel();
+            this.SuspendLayout();
+            // 
+            // dungeonPanel
+            // 
+            this.dungeonPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dungeonPanel.HorizontalScrollbarBarColor = true;
+            this.dungeonPanel.HorizontalScrollbarHighlightOnWheel = false;
+            this.dungeonPanel.HorizontalScrollbarSize = 10;
+            this.dungeonPanel.Location = new System.Drawing.Point(23, 63);
+            this.dungeonPanel.Name = "dungeonPanel";
+            this.dungeonPanel.Size = new System.Drawing.Size(674, 874);
+            this.dungeonPanel.TabIndex = 1;
+            this.dungeonPanel.VerticalScrollbarBarColor = true;
+            this.dungeonPanel.VerticalScrollbarHighlightOnWheel = false;
+            this.dungeonPanel.VerticalScrollbarSize = 10;
+            // 
+            // GameLevelForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "GameLevelForm";
+            this.ClientSize = new System.Drawing.Size(720, 960);
+            this.Controls.Add(this.dungeonPanel);
+            this.ForeColor = System.Drawing.SystemColors.Control;
+            this.Name = "GameLevelForm";
+            this.Text = "Cardville Dungeon pre-alpha";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+        private MetroFramework.Controls.MetroPanel dungeonPanel;
     }
 }
 

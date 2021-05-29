@@ -16,7 +16,8 @@ namespace Cardville.Dungeon.WFViewController
             = new Dictionary<GameObjectType, string>()
             {
                 {GameObjectType.Monster, "Сила {0}"},
-                {GameObjectType.Equipment, "Бонус +{0}"}
+                {GameObjectType.Equipment, "Бонус +{0}"},
+                {GameObjectType.Player, "Сила {0}"}
             };
 
         public static Label From(Card card)
@@ -29,6 +30,14 @@ namespace Cardville.Dungeon.WFViewController
                 label.Text = string.Format(powerPhrases[card.Type], card.Power);
 
             return label;
+        }
+
+        public static string GetText(Entity entity)
+        {
+            if (powerPhrases.ContainsKey(entity.Type))
+                return string.Format(powerPhrases[entity.Type], entity.Power);
+
+            return "";
         }
     }
 }

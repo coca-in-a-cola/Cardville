@@ -10,3 +10,11 @@ C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardville.Dungeon.WFViewContro
 C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardville.Dungeon.WFViewController\obj\Debug\Cardville.Dungeon.WFViewController.csproj.CopyComplete
 C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardville.Dungeon.WFViewController\obj\Debug\Cardville.Dungeon.WFViewController.exe
 C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardville.Dungeon.WFViewController\obj\Debug\Cardville.Dungeon.WFViewController.pdb
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardville.Dungeon.WFViewController\bin\Debug\MetroFramework.Design.dll
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardville.Dungeon.WFViewController\bin\Debug\MetroFramework.dll
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardville.Dungeon.WFViewController\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardville.Dungeon.WFViewController\obj\Debug\Cardville.Dungeon.WFViewController.CardControl.resources
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardville.Dungeon.WFViewController\obj\Debug\Cardville.Dungeon.WFViewController.DungeonControl.resources
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardville.Dungeon.WFViewController\obj\Debug\Cardville.Dungeon.WFViewController.GameLevelForm.resources
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardville.Dungeon.WFViewController\obj\Debug\Cardville.Dungeon.WFViewController.PlayerControl.resources
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardville.Dungeon.WFViewController\obj\Debug\Cardville.Dungeon.WFViewController.InventoryControl.resources

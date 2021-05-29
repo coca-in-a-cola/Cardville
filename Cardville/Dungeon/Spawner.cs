@@ -9,15 +9,14 @@ using Cardville.Core;
 
 namespace Cardville.Dungeon
 {
-    public class Spawner
+    public class Spawner : GameObject
     {
-        public readonly Game RelatedGame;
         private CDFGenerator<Tuple<GameObjectType, Rarity>> typeRarityGenerator;
+        private CDFGenerator<Rarity> rarityGenerator;
         private Random random;
 
-        public Spawner (Game game)
+        public Spawner (Game game) : base(game, "spawner", GameObjectType.Empty)
         {
-            RelatedGame = game;
             random = new Random(game.Seed);
             var spawnWeights = new List<KeyValuePair<Tuple<GameObjectType, Rarity>, double>>();
 
@@ -27,21 +26,34 @@ namespace Cardville.Dungeon
                 foreach (var rarity in
                 Enum.GetValues(typeof(Rarity)).Cast<Rarity>())
                 {
-                    var value = RelatedGame.RarityTypeInfo.GetSpawnChanceWeight(type, rarity);
+                    var value = Game.RarityTypeInfo.GetSpawnChanceWeight(type, rarity);
                     spawnWeights.Add(new KeyValuePair<Tuple<GameObjectType, Rarity>, double>
                         (Tuple.Create(type, rarity), value));
                 }
             }
 
-            var randomSeed = random.Next();
+            var raritySpawnWeights = new List<KeyValuePair<Rarity, double>>();
+
+            foreach (var rarity in
+                Enum.GetValues(typeof(Rarity)).Cast<Rarity>())
+            {
+                var value = Game.RarityTypeInfo.GetSpawnChanceWeight(GameObjectType.Equipment, rarity);
+                raritySpawnWeights.Add(new KeyValuePair<Rarity, double>
+                    (rarity, value));
+            }
+
             typeRarityGenerator = new CDFGenerator<Tuple<GameObjectType, Rarity>>
-                (spawnWeights, randomSeed);
+                (spawnWeights, random.Next());
+
+            rarityGenerator = new CDFGenerator<Rarity>(raritySpawnWeights, random.Next());
+
+            UpdateSelf();
         }
 
-        public IInteractive GetRandomGroundObject()
+        public InteractiveGameObject GetRandomGroundObject()
         {
             var typeRarity = typeRarityGenerator.SpawnFromTable();
-            var SelectedList = RelatedGame
+            var SelectedList = Game
                 .GameData
                 .CardTemplatesOfType[typeRarity.Item1]
                 .Where(e => e.Rarity == typeRarity.Item2)
@@ -49,16 +61,35 @@ namespace Cardville.Dungeon
 
             var randomIndex = random.Next(SelectedList.Count);
 
-            var randomCoef = (random.NextDouble() * 2 - 1) * 0.13;
             var template = SelectedList[randomIndex];
-            var level = (int)Math
-                .Sqrt(RelatedGame.Days
-                * RelatedGame.Player.Level
-                * RelatedGame.Player.Level
-                * randomCoef
-                + 3);
+            var level = (int)Math.Round
+                (Math.Pow(Game.Days, 0.2) * Game.Player.Level
+                + 1);
 
-            return Card.FromTemplate(RelatedGame, template, level);
+            UpdateSelf();
+            return Card.FromTemplate(Game, template, level);
+        }
+
+        public InteractiveGameObject GetRandomObjectOfType(GameObjectType type)
+        {
+            var rarity = rarityGenerator.SpawnFromTable();
+            var SelectedList = Game
+                .GameData
+                .CardTemplatesOfType[type]
+                .Where(e => e.Rarity == rarity)
+                .ToList();
+
+            var randomIndex = random.Next(SelectedList.Count);
+
+            var template = SelectedList[randomIndex];
+
+            var level = (int)Math.Round
+                (Math.Pow(Game.Days == 0 ? 1 : Game.Days, 0.2)
+                * (Game.Player == null ? 1 : Game.Player.Level)
+                + 1);
+
+            UpdateSelf();
+            return Card.FromTemplate(Game, template, level);
         }
     }
 }

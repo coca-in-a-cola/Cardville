@@ -13,7 +13,7 @@ namespace Cardville.Engine
             {1f, 1.1f, 1.25f, 1.5f, 1.75f, 2.0f, 2.5f, 3f, 4.20f};
 
         private readonly List<float> typePowerMultiplier = new List<float>()
-            {0f, 1f, 1f, 0.8f, 0.5f, 0.4f, 0.2f};
+            {0f, 1f, 1f, 0.8f, 0.5f, 0.4f, 0.4f};
 
         //Than more is weight, than greater is the chance
         private readonly List<float> raritySpawnChanceWeights = new List<float>()

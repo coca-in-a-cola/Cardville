@@ -4,6 +4,16 @@
     "C:\\Users\\Me\\source\\repos\\coca-in-a-cola\\Cardville\\TestProject\\TestProject.csproj": {}
   },
   "projects": {
+    "C:\\Users\\Me\\source\\repos\\coca-in-a-cola\\Cardville\\Cardville\\Cardville.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Me\\source\\repos\\coca-in-a-cola\\Cardville\\Cardville\\Cardville.csproj",
+        "projectName": "Cardville",
+        "projectPath": "C:\\Users\\Me\\source\\repos\\coca-in-a-cola\\Cardville\\Cardville\\Cardville.csproj"
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
     "C:\\Users\\Me\\source\\repos\\coca-in-a-cola\\Cardville\\TestProject\\TestProject.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -27,7 +37,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Me\\source\\repos\\coca-in-a-cola\\Cardville\\Cardville\\Cardville.csproj": {
+                "projectPath": "C:\\Users\\Me\\source\\repos\\coca-in-a-cola\\Cardville\\Cardville\\Cardville.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
