@@ -10,5 +10,7 @@ namespace Cardville.Engine
     {
         bool CanInteractWith(IInteractive another);
         void InteractWith(IInteractive another);
+        void Destroy();
+        event Action OnDestroy;
     }
 }

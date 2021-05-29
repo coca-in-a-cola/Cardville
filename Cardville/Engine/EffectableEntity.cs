@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Cardville.Dungeon;
 
 namespace Cardville.Engine
 {
@@ -13,7 +14,7 @@ namespace Cardville.Engine
         private Stack<Effect> activeEffects = new Stack<Effect>();
         private Dictionary<string, object> originalValues;
 
-        public EffectableEntity(string name, int level) : base(name, level)
+        public EffectableEntity(Game game, string name, int level, GameObjectType type) : base(game, name, level, type)
         {
 
         }

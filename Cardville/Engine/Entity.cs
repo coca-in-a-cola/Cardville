@@ -3,31 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Cardville.Dungeon;
 
 namespace Cardville.Engine
 {
-    public abstract class Entity : IInteractive
+    public abstract class Entity : GameObject
     {
-        public Guid UUID { get; }
-        public string Name { get; protected set; }
         public int Level { get; }
         public virtual int Power { get; protected set; }
 
-        public virtual bool CanInteractWith(IInteractive another)
+        public Entity (Game game, string name, int level, GameObjectType type) : base(game, name, type)
         {
-            return false;
-        }
-        public virtual void InteractWith(IInteractive another)
-        {
-
-        }
-
-        public Entity (string name, int level)
-        {
-            Name = name;
             Level = level;
             Power = level;
-            UUID = Guid.NewGuid();
         }
     }
 }

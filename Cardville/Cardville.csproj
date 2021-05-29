@@ -43,8 +43,12 @@
   <ItemGroup>
     <Compile Include="Cards\Card.cs" />
     <Compile Include="Cards\CardTemplate.cs" />
+    <Compile Include="Cards\Equipment.cs" />
     <Compile Include="Cards\Monster.cs" />
-    <Compile Include="Core\Environment.cs" />
+    <Compile Include="Core\CDFGenerator.cs" />
+    <Compile Include="Dungeon\EmptyCell.cs" />
+    <Compile Include="Dungeon\Spawner.cs" />
+    <Compile Include="Engine\Environment.cs" />
     <Compile Include="Core\Table3D.cs" />
     <Compile Include="Dungeon\DungeonGenerator.cs" />
     <Compile Include="Dungeon\GamePhase.cs" />
@@ -57,15 +61,21 @@
     <Compile Include="Effects\EffectEvent.cs" />
     <Compile Include="Effects\State.cs" />
     <Compile Include="Engine\Entity.cs" />
-    <Compile Include="Engine\IInteractive.cs" />
+    <Compile Include="Engine\GameData.cs" />
+    <Compile Include="Engine\GameObject.cs" />
+    <Compile Include="Engine\GameObject1.cs" />
     <Compile Include="Engine\IEffectable.cs" />
     <Compile Include="Engine\IUpdatable.cs" />
+    <Compile Include="Engine\GameObjectType.cs" />
+    <Compile Include="Engine\RarityTypeInfo.cs" />
+    <Compile Include="Engine\TypeRestorer.cs" />
+    <Compile Include="Engine\Update.cs" />
     <Compile Include="Player\Inventory.cs" />
     <Compile Include="Cards\Item.cs" />
     <Compile Include="Player\Personality.cs" />
-    <Compile Include="Player\Player.cs" />
+    <Compile Include="Player\PlayerObject.cs" />
     <Compile Include="Player\PresonalityEnums.cs" />
-    <Compile Include="Core\RarityType.cs" />
+    <Compile Include="Engine\Rarity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

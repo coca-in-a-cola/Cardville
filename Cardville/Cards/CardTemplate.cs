@@ -10,10 +10,10 @@ using Cardville.Core;
 namespace Cardville.Cards
 {
     public class CardTemplate {
-        public int ID { get; }
-        public string Name { get; }
-        public RarityType Rarity { get; }
-        public string Description { get; }
-        public Type CardType { get; }
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public Rarity Rarity { get; set; }
+        public string Description { get; set; }
+        public GameObjectType CardType { get; set; }
     }
 }
