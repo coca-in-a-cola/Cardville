@@ -55,7 +55,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CardControl.Designer.cs">
+      <DependentUpon>CardControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="CardPainter.cs" />
+    <Compile Include="DungeonControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DungeonControl.Designer.cs">
+      <DependentUpon>DungeonControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="DungeonPainter.cs" />
     <Compile Include="GameObjectPainter.cs" />
     <Compile Include="GameLevelForm.cs">
@@ -64,16 +76,47 @@
     <Compile Include="GameLevelForm.Designer.cs">
       <DependentUpon>GameLevelForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="IDungeonRoomContol.cs" />
+    <Compile Include="InventoryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InventoryControl.Designer.cs">
+      <DependentUpon>InventoryControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="IPainter.cs" />
     <Compile Include="IHasIInteractive.cs" />
     <Compile Include="InventoryPainter.cs" />
     <Compile Include="PainterSelector.cs" />
+    <Compile Include="PlayerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PlayerControl.Designer.cs">
+      <DependentUpon>PlayerControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="PlayerPainter.cs" />
     <Compile Include="PowerLabels.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RarityLabels.cs" />
+    <Compile Include="RoomControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="TypeLabels.cs" />
+    <EmbeddedResource Include="CardControl.resx">
+      <DependentUpon>CardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DungeonControl.resx">
+      <DependentUpon>DungeonControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameLevelForm.resx">
+      <DependentUpon>GameLevelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryControl.resx">
+      <DependentUpon>InventoryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerControl.resx">
+      <DependentUpon>PlayerControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

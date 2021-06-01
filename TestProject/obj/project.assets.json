@@ -1225,6 +1225,15 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
+      },
+      "Cardville/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Cardville.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Cardville.dll": {}
+        }
       }
     }
   },
@@ -4613,10 +4622,16 @@
         "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xmldocument.nuspec"
       ]
+    },
+    "Cardville/1.0.0": {
+      "type": "project",
+      "path": "../Cardville/Cardville.csproj",
+      "msbuildProject": "../Cardville/Cardville.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Cardville >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "NUnit >= 3.12.0",
       "NUnit3TestAdapter >= 3.16.1"
@@ -4648,7 +4663,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Me\\source\\repos\\coca-in-a-cola\\Cardville\\Cardville\\Cardville.csproj": {
+              "projectPath": "C:\\Users\\Me\\source\\repos\\coca-in-a-cola\\Cardville\\Cardville\\Cardville.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

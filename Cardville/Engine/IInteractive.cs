@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace Cardville.Engine
 {
-    public delegate void UpdateEventHandler(object sender, EventArgs e);
-
-    public interface IUpdatable
+    public interface IInteractive
     {
-        void Update();
+        bool CanInteractWith(IInteractive another);
+        void InteractWith(IInteractive another);
     }
 }

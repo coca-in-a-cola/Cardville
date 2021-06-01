@@ -1,0 +1,12 @@
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardvile.CreatorMode\bin\Debug\Cardvile.CreatorMode.exe.config
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardvile.CreatorMode\bin\Debug\Cardvile.CreatorMode.exe
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardvile.CreatorMode\bin\Debug\Cardvile.CreatorMode.pdb
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardvile.CreatorMode\bin\Debug\Cardville.dll
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardvile.CreatorMode\bin\Debug\Cardville.pdb
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardvile.CreatorMode\obj\Debug\Cardvile.CreatorMode.csprojAssemblyReference.cache
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardvile.CreatorMode\obj\Debug\Cardvile.CreatorMode.Properties.Resources.resources
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardvile.CreatorMode\obj\Debug\Cardvile.CreatorMode.csproj.GenerateResource.cache
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardvile.CreatorMode\obj\Debug\Cardvile.CreatorMode.csproj.CoreCompileInputs.cache
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardvile.CreatorMode\obj\Debug\Cardvile.CreatorMode.csproj.CopyComplete
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardvile.CreatorMode\obj\Debug\Cardvile.CreatorMode.exe
+C:\Users\Me\source\repos\coca-in-a-cola\Cardville\Cardvile.CreatorMode\obj\Debug\Cardvile.CreatorMode.pdb

@@ -19,6 +19,8 @@ namespace Cardville.Cards
             : base (game, template.Name, level, template.CardType)
         {
             Template = template;
+            Power = (int)Math.Round(level *
+                game.RarityTypeInfo.GetPowerMultiplier(template.CardType, template.Rarity));
         }
 
         public static Card FromTemplate(Game game, CardTemplate template, int level)
@@ -39,7 +41,6 @@ namespace Cardville.Cards
                 default:
                     throw new InvalidOperationException("unknown item type");
             }
-
         }
     }
 }

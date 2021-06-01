@@ -28,8 +28,29 @@ namespace Cardville.Player
         {
             if (another is Item)
             {
+                if (Inventory.Size == MaxEquipItems)
+                    Inventory.RemoveLast();
+
                 Inventory.AddItem((Item)another);
+                Inventory.Wear((Item)another);
             }
+
+            if (another is Monster)
+            {
+                if (Power > ((Monster)another).Power)
+                {
+                    var levelUp = ((Monster)another).Level / 10 + 1;
+                    Level += levelUp;
+                    Power += levelUp;
+                }
+                    
+                else
+                {
+                    Game.GameOver();
+                }
+            }
+
+            Game.NextDay();
         }
 
         public PlayerObject (Game game, string name) : base(game, name, 1, GameObjectType.Player)
@@ -39,12 +60,12 @@ namespace Cardville.Player
 
         public void AddPower(int power)
         {
-            this.Power -= power;
+            this.Power += power;
         }
 
         public void RemovePower(int power)
         {
-            this.Power += power;
+            this.Power -= power;
         }
     }
 }

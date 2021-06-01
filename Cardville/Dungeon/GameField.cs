@@ -43,7 +43,7 @@ namespace Cardville.Dungeon
             {
                 for (int y = 0; y < height; ++y)
                 {
-                    gameField[x, y] = game.Generator.GetRandomGroundObject();
+                    //gameField[x, y] = game.Generator.GetRandomGroundObject();
                 }
             }
 
@@ -84,7 +84,7 @@ namespace Cardville.Dungeon
                 nextIndex = Tuple.Create(lastIndex.Item1 - indexDelta.Item1, lastIndex.Item2 - indexDelta.Item2);
             }
             
-            gameField[lastIndex.Item1, lastIndex.Item2] = game.Generator.GetRandomGroundObject();
+            //gameField[lastIndex.Item1, lastIndex.Item2] = game.Generator.GetRandomGroundObject();
             OnUpdate?.Invoke();
         }
 

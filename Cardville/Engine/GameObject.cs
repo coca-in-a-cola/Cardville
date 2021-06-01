@@ -7,7 +7,7 @@ using Cardville.Dungeon;
 
 namespace Cardville.Engine
 {
-    public abstract class GameObject : IInteractive
+    public abstract class GameObject
     {
         public readonly GameObjectType Type = GameObjectType.Empty;
         public Guid UUID { get; }
@@ -15,21 +15,20 @@ namespace Cardville.Engine
 
         public readonly Game Game;
 
-        public event Action OnDestroy;
-
-        public virtual bool CanInteractWith(IInteractive another)
+        private Action Update;
+        public event Action OnUpdate
         {
-            return false;
+            add { Update += value; }
+            remove { Update -= value; }
         }
 
-        public virtual void InteractWith(IInteractive another)
-        {
-            
-        }
+        public readonly List<GameObject> Chlidren;
+        public GameObject Parent { get; private set; }
 
-        public void Destroy()
+
+        public virtual void UpdateSelf()
         {
-            OnDestroy();
+            Update?.Invoke();
         }
 
         private GameObject(Game game, string name)
@@ -37,6 +36,8 @@ namespace Cardville.Engine
             UUID = Guid.NewGuid();
             Game = game;
             Name = name;
+            Chlidren = new List<GameObject>();
+            UpdateSelf();
         }
 
         public GameObject (Game game, string name, GameObjectType type) : this (game, name)

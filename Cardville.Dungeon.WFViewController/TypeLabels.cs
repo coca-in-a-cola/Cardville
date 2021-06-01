@@ -30,5 +30,8 @@ namespace Cardville.Dungeon.WFViewController
 
             return label;
         }
+
+        public static string GetText(GameObjectType type)
+            => typeNames[type];
     }
 }

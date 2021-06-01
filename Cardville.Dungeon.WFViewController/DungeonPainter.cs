@@ -33,18 +33,14 @@ namespace Cardville.Dungeon.WFViewController
             Margin = new Point(10, 10);
             Refresh();
             Game.Map.OnUpdate += () => Refresh();
-            game.OnSelect += () => HighlightForSelected();
-            game.OnUnselect += () => Unselect();
         }
 
         public void HighlightForSelected()
         {
             foreach (var e in CanvasItems)
             {
-                if (Game.Selected == e)
-                    e.GetControl().BackColor = SelectedColor;
-                else if (Game.Map.CanInteractInField(Game.Selected, e.GetIInteractive()))
-                    e.GetControl().BackColor = SelectableColor;
+               // else if (Game.Map.CanInteractInField(Game.Selected, e.GetIInteractive()))
+                   // e.GetControl().BackColor = SelectableColor;
             }
         }
 
@@ -64,8 +60,8 @@ namespace Cardville.Dungeon.WFViewController
             {
                 for (int yIndex = 0; yIndex < Game.Map.Height; ++yIndex)
                 {
-                    var gameObject = Game.Map[xIndex, yIndex];
-                    CanvasItems.Add(PainterSelector.GetPainter(gameObject));
+                    //var gameObject = Game.Map[xIndex, yIndex];
+                    //CanvasItems.Add(PainterSelector.GetPainter(gameObject));
                 }
             }
         }
@@ -82,8 +78,8 @@ namespace Cardville.Dungeon.WFViewController
                     var control = CanvasItems[index].GetControl();
                     control.Location = drawLocation;
 
-                    control.Click += (sender, args)
-                        => Game.Select(CanvasItems[index].GetIInteractive());
+                   // control.Click += (sender, args)
+                        //=> Game.Select(CanvasItems[index].GetIInteractive());
 
                     this.control.Controls.Add(control);
 
